@@ -11,7 +11,7 @@ public class GooglePageTest extends BaseClass{
 	//@Test
 	public void googleTest() {
 		GooglePage gop=PageFactory.initElements(driver, GooglePage.class);
-		gop.enterInsearchBox("Bangladesh");
+		gop.enterInsearchBox("New York");
 		
 	}
 
