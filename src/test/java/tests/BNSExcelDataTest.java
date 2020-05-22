@@ -35,21 +35,21 @@ public void bnspage(String FN, String LN, String EM, String PW, String Pho,
 	bns.selectMonth(MN);
 	bns.selectDay(DY);
 	bns.selectYear(YR);
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 	if(Gender.equalsIgnoreCase("Male")) {
 		bns.clickMale();
 	}
 	else {
 		bns.clickFemale();
 	}
-	Thread.sleep(5000);
+	Thread.sleep(2000);
 
 	bns.clickSubmit();
 	
 
 
 	bns.verifyMessage(Msn);
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 }
 @DataProvider(name="bnsdata")
 public Object[][] getData() throws IOException{

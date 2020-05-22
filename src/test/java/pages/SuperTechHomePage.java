@@ -26,6 +26,12 @@ public class SuperTechHomePage extends BaseClass {
 	public void clickOnGoogle() {
 		google.click();
 	}
+	
+	@FindBy(name="q")
+	WebElement searchbox;
+	public void enterInsearchBox(String searchitem) {
+		searchbox.sendKeys(searchitem);
+	}
 	@FindBy(xpath="/html/body/center/form/table/tbody/tr[1]/td[2]/input")
 	WebElement iframeFName;
 	public void enterOnIframeFname(String ifn) {
@@ -37,6 +43,6 @@ public class SuperTechHomePage extends BaseClass {
 	public void clickOnDownload() {
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame("Selenium");
-		iframeFName.click();;
+		iframedownload.click();;
 	}
 }

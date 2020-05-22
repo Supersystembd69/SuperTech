@@ -28,9 +28,9 @@ public class SuperTechTest extends BaseClass{
 	@Test(priority=1)
 	public void googleTest() throws InterruptedException {
 		test=report.createTest("SuperTech");
-		GooglePage gop=PageFactory.initElements(driver, GooglePage.class);
-		gop.enterInsearchBox("Bangladesh");
-		Thread.sleep(4000);
+		SuperTechHomePage suhp=PageFactory.initElements(driver, SuperTechHomePage.class);
+		suhp.enterInsearchBox("Bangladesh");
+		Thread.sleep(1000);
 			
 	}
 
@@ -43,8 +43,10 @@ public class SuperTechTest extends BaseClass{
 		ArrayList<String>tab0= new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tab0.get(0));
 		
+		
+		
 		suhp.enterOnIframeFname("Ataur");
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 	}
 	
 	@Test(priority=3)
@@ -53,6 +55,6 @@ public class SuperTechTest extends BaseClass{
 		SuperTechHomePage suhp=PageFactory.initElements(driver, SuperTechHomePage.class);
 		
 		suhp.clickOnDownload();
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 	}
 }
