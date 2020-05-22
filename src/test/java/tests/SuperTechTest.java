@@ -17,7 +17,7 @@ public class SuperTechTest extends BaseClass{
 	public void superTech() throws InterruptedException {
 		test=report.createTest("SuperTect");
 		SuperTechHomePage suhp=PageFactory.initElements(driver, SuperTechHomePage.class);
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("file:///E:/WebSite/SuperTech.html"));
 		suhp.mouseHover();
 		suhp.clickOnGoogle();
 		ArrayList<String>tab1= new ArrayList<String>(driver.getWindowHandles());
@@ -39,18 +39,26 @@ public class SuperTechTest extends BaseClass{
 
 	@Test(priority=2)
 	public void iframeTest() throws InterruptedException {
-		test=report.createTest("SuperTect");
+		test=report.createTest("SuperTech");
 		SuperTechHomePage suhp=PageFactory.initElements(driver, SuperTechHomePage.class);
 		
 		suhp.enterOnIframeFname("Ataur");
 		Thread.sleep(4000);
 	}
 	@Test(priority=2)
-	public void alertHandling() throws InterruptedException {
-		test=report.createTest("SuperTect");
+	public void enterFirstName() throws InterruptedException {
+		test=report.createTest("SuperTech");
 		SuperTechHomePage suhp=PageFactory.initElements(driver, SuperTechHomePage.class);
 		
 		suhp.enterOnIframeFname("Ataur");
+		Thread.sleep(4000);
+	}
+	@Test(priority=2)
+	public void clickOndownload() throws InterruptedException {
+		test=report.createTest("SuperTech");
+		SuperTechHomePage suhp=PageFactory.initElements(driver, SuperTechHomePage.class);
+		
+		suhp.clickOnDownload();
 		Thread.sleep(4000);
 	}
 }

@@ -32,4 +32,11 @@ public class SuperTechHomePage extends BaseClass {
 		driver.switchTo().frame("LoginForm");
 		iframeFName.sendKeys(ifn);
 	}
+	@FindBy(linkText="DOWNLOAD")
+	WebElement iframedownload;
+	public void clickOnDownload() {
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("Selenium");
+		iframeFName.click();;
+	}
 }
