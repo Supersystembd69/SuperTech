@@ -47,10 +47,12 @@ public class SuperTechHomePage extends BaseClass {
 		iframedownload.click();;
 	}
 
-	@FindBy(xpath="//*[@id=\"btnConfirm\"]")
+	@FindBy(xpath="//*[@id='btnConfirm']")
 	WebElement showConfirmAlert;
-	public void AlerHandling() {
+	public void AlerHandling() throws InterruptedException {
+		driver.switchTo().defaultContent();
 		showConfirmAlert.click();
+		Thread.sleep(3000);
 		Alert alt=driver.switchTo().alert();
 		alt.accept();
 		
