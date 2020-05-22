@@ -57,4 +57,12 @@ public class SuperTechTest extends BaseClass{
 		suhp.clickOnDownload();
 		Thread.sleep(1000);
 	}
+	@Test(priority=4)
+	public void alerthandling() throws InterruptedException {
+		test=report.createTest("SuperTech");
+		SuperTechHomePage suhp=PageFactory.initElements(driver, SuperTechHomePage.class);
+		
+		suhp.AlerHandling();
+		Thread.sleep(1000);
+	}
 }

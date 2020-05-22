@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -45,4 +46,14 @@ public class SuperTechHomePage extends BaseClass {
 		driver.switchTo().frame("Selenium");
 		iframedownload.click();;
 	}
+
+	@FindBy(xpath="//*[@id=\"btnConfirm\"]")
+	WebElement showConfirmAlert;
+	public void AlerHandling() {
+		showConfirmAlert.click();
+		Alert alt=driver.switchTo().alert();
+		alt.accept();
+		
+	}
+	
 }
