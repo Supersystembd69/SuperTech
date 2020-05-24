@@ -22,7 +22,7 @@ public class SuperTechHomePage extends BaseClass {
 		act.moveToElement(sm).build().perform();
 		
 	}
-	@FindBy(linkText="Google")
+	@FindBy(linkText="Googl")
 	WebElement google;
 	public void clickOnGoogle() {
 		google.click();
