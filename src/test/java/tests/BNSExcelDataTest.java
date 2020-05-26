@@ -23,32 +23,32 @@ public void bnspage(String FN, String LN, String EM, String PW, String Pho,
 		String MN, String DY, String YR, String Gender, String Msn) throws InterruptedException {
 
 	test=report.createTest("BNS page Test");
-	BNSPage bns=PageFactory.initElements(driver, BNSPage.class);
+	BNSPage bnsp=PageFactory.initElements(driver, BNSPage.class);
 
 	driver.get(prop.getProperty("url"));
-	bns.enterFirstName(FN);
-	bns.enterLastName(LN);
-	bns.enterEmail(EM);
-	bns.enterPassword(PW);
-	bns.enterPhone(Pho);
+	bnsp.enterFirstName(FN);
+	bnsp.enterLastName(LN);
+	bnsp.enterEmail(EM);
+	bnsp.enterPassword(PW);
+	bnsp.enterPhone(Pho);
 
-	bns.selectMonth(MN);
-	bns.selectDay(DY);
-	bns.selectYear(YR);
+	bnsp.selectMonth(MN);
+	bnsp.selectDay(DY);
+	bnsp.selectYear(YR);
 	Thread.sleep(2000);
 	if(Gender.equalsIgnoreCase("Male")) {
-		bns.clickMale();
+		bnsp.clickMale();
 	}
 	else {
-		bns.clickFemale();
+		bnsp.clickFemale();
 	}
 	Thread.sleep(2000);
 
-	bns.clickSubmit();
+	bnsp.clickSubmit();
 	
 
 
-	bns.verifyMessage(Msn);
+	bnsp.verifyMessage(Msn);
 	Thread.sleep(2000);
 }
 @DataProvider(name="bnsdata")
