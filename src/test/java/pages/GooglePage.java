@@ -10,6 +10,7 @@ public class GooglePage {
 	WebElement searchbox;
 	public void enterInsearchBox(String searchitem) {
 		searchbox.sendKeys(searchitem);
+		System.out.println("********************************");
 	}
 
 }
